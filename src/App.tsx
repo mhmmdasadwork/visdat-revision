@@ -13,7 +13,7 @@ import {
   Tooltip
 } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
-import { Bar, Line, Radar } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 
 ChartJS.register(
   CategoryScale,
@@ -134,12 +134,7 @@ export default function App() {
 
   return <main className="w-full max-w-screen-xl container pt-10">
 
-
     <div className="grid grid-cols-1 gap-3 pt-5 lg:grid-cols-2">
-      {/* <div className="p-2  bg-white shadow-lg rounded-lg overflow-hidden w-full h-[500px]">
-        <Line options={{ ...options, plugins: { ...options.plugins, title: { text: "Perkembangan Akademik IPK and IPS", display: true, } } }} data={lineData} />
-      </div> */}
-
       <div className="w-full pt-0 pb-10 overflow-x-scroll lg:overflow-hidden">
         <table className="w-full  table-auto ">
           <thead className="text-xs font-semibold uppercase text-white bg-[#387ADF]">
