@@ -108,74 +108,7 @@ const options: ChartOptions<'line' | 'bar'> = {
 
   }
 };
-const lineData: ChartData<'line'> = defaultValue
 const barData: ChartData<'bar'> = defaultValue
-
-// Radar
-const radarData = {
-  labels: labels,
-  datasets: [
-    {
-      label: 'IPK',
-      data: nilai.ipk,
-      borderColor: '#FBA834',
-      backgroundColor: 'rgba(251, 168, 52, 0.2)',
-      pointBackgroundColor: '#FBA834',
-    },
-    {
-      label: 'IPS',
-      data: nilai.ips,
-      borderColor: 'rgba(53, 162, 235, 0.5)',
-      backgroundColor: 'rgba(53, 162, 235, 0.2)',
-      pointBackgroundColor: 'rgba(53, 162, 235, 1)',
-    }
-  ],
-};
-
-const radarOptions: ChartOptions<'radar'> = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: 'bottom' as const,
-      labels: {
-        usePointStyle: true,
-      },
-    },
-    title: {
-      display: true,
-      text: 'Comparison of IPK and IPS (Area)',
-    },
-    datalabels: {
-      display: false,
-    },
-  },
-  // aspectRatio: 1,
-  maintainAspectRatio: false,
-  layout: {
-    padding: {
-      top: 32,
-      right: 16,
-      bottom: 16,
-      left: 8,
-    },
-  },
-  scales: {
-    r: {
-      min: 0,
-      max: 4,
-      ticks: {
-        stepSize: 1,
-        z: 10,
-        showLabelBackdrop: false,
-        font: {
-          weight: 'bold',
-          size: 15
-        }
-      },
-
-    },
-  },
-};
 const keylabels: ('ipk' | 'ips')[] = ['ipk', 'ips'];
 
 const GenerateMinOrMax = ({ value, type }: { value: number, type: ('ipk' | 'ips') }) => {
